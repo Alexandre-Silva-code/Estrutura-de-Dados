@@ -1,1 +1,23 @@
+//Implemente a função soma_precos, que devolve a soma do campo preco de todos os produtos armazenados na lista. Se li for NULL, a função deve devolver 0.
 
+#include <stdio.h>
+
+#define MAX 100
+
+struct lista{
+    int qtd;
+    int dados[MAX];
+};
+
+typedef struct lista Lista;
+
+float soma_precos(Lista* li){
+    float soma = 0;
+    if(li == NULL){
+        return 0;
+    }
+    for(int i = 0; i < li->qtd; i++){
+        float soma = soma + li->dados[i];
+    }
+    return soma;
+}
