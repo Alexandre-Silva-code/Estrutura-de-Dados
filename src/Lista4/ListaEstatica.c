@@ -3,10 +3,15 @@
 
 #define MAX 100
 
-struct lista {
-    int qtd;
-    float dados[MAX];
+struct produto{
+    int codigo;
+    char nome[50];
     float preco;
+};
+
+struct lista{
+    int qtd;
+    struct produto dados[MAX];
 };
 
 typedef struct lista Lista;
