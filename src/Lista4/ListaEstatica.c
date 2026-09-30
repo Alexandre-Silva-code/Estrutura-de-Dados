@@ -80,7 +80,27 @@ int busca_por_nome(Lista* li, char *nome, struct produto *p){
 //A função segue a mesma convenção de retorno das demais funções de inserção.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
+int insere_lista_decrescente(Lista* li, struct produto p){
+    if(li== NULL || li->qtd == MAX){
+        return 0;
+    }
+    int i = 0;
+    struct produto temp;
+    li->dados[li->qtd]=p;
+    li->qtd += 1;
+    while(i != li->qtd){
+        for(int t = 0; t < li->qtd-1; t++){
+            if(li->dados[t].preco < li->dados[t+1].preco){
+                temp = li->dados[t];
+                li->dados[t] = li->dados[t+1];
+                li->dados[t+1] = temp;
+            }
+        }
+        i++;
 
+    }
+    return 1;
+}
 
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
