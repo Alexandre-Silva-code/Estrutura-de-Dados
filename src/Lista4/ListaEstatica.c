@@ -18,7 +18,8 @@ typedef struct lista Lista;
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Q1
-
+//Implemente a função lista_tem_espaco, que devolve 1 se a lista comportar mais n inserções sem exceder o tamanho máximo, e 0 caso contrário (incluindo quando li é NULL).
+//Observação: Não utilize inserções de teste: a resposta deve vir apenas da comparação entre os campos da lista e o parâmetro n.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 int lista_tem_espaco(Lista* li, int n){
