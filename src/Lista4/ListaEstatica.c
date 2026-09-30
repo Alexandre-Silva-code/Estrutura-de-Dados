@@ -53,7 +53,8 @@ float soma_precos(Lista* li){
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Q3
-//Implemente a função busca_por_nome, que busca na lista o primeiro produto cujo campo nome seja igual à string apontada por nome, e copia esse produto para *p. A função devolve 1 em caso de sucesso e 0 caso o nome não seja encontrado ou li seja NULL.
+//Implemente a função busca_por_nome, que busca na lista o primeiro produto cujo campo nome seja igual à string apontada por nome, e copia esse produto para *p. 
+//A função devolve 1 em caso de sucesso e 0 caso o nome não seja encontrado ou li seja NULL.
 //Observação: Utilize a função strcmp da biblioteca string.h para comparar as strings.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -75,7 +76,8 @@ int busca_por_nome(Lista* li, char *nome, struct produto *p){
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Q4
-
+//Implemente a função insere_lista_decrescente, que insere o produto p na lista mantendo-a ordenada de forma decrescente pelo campo preco. 
+//A função segue a mesma convenção de retorno das demais funções de inserção.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
