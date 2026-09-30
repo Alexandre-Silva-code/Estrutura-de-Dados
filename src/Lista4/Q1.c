@@ -4,7 +4,8 @@
 
 struct lista {
     int qtd;
-    int dados[MAX];
+    float dados[MAX];
+    float preco;
 };
 
 typedef struct lista Lista;
@@ -18,4 +19,19 @@ int lista_tem_espaco(Lista* li, int n){
     } else{
         return 0;
     }
+}
+
+
+
+
+
+float soma_precos(Lista* li){
+    if(li == NULL){
+        return 0;
+    }
+    li->preco = 0;
+    for(int i = 0; i < li->qtd; i++){
+        li->preco = li->preco + li->dados[i];
+    }
+    return li->preco;
 }
