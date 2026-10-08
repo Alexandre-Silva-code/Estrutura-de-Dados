@@ -44,11 +44,11 @@ float soma_precos(Lista* li){
     if(li == NULL){
         return 0;
     }
-    li->preco = 0;
+    float preco = 0;
     for(int i = 0; i < li->qtd; i++){
-        li->preco = li->preco + li->dados[i];
+        preco = preco + li->dados[i].preco;
     }
-    return li->preco;
+    return preco;
 }
 
 
