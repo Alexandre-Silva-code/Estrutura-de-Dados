@@ -1,21 +1,4 @@
-#include <stdio.h>
-#include <string.h>
 #include "ListaEstatica.h"
-
-#define MAX 100
-
-struct produto{
-    int codigo;
-    char nome[50];
-    float preco;
-};
-
-struct lista{
-    int qtd;
-    struct produto dados[MAX];
-};
-
-typedef struct lista Lista;
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Q1
