@@ -106,7 +106,9 @@ int insere_lista_decrescente(Lista* li, struct produto p){
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Q5
-
+//Implemente a função remove_mais_caro, que localiza o produto de maior preco na lista, remove-o utilizando a técnica de remoção otimizada (Aula 05) e copia o produto removido para *removido. 
+//A função devolve 1 em caso de sucesso e 0 se a lista estiver vazia ou li for NULL.
+//Observação: Em caso de empate entre dois ou mais produtos de maior preço, remova o primeiro deles na ordem em que aparece na lista.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
