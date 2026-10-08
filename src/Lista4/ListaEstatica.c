@@ -112,6 +112,21 @@ int insere_lista_decrescente(Lista* li, struct produto p){
 //Observação: Em caso de empate entre dois ou mais produtos de maior preço, remova o primeiro deles na ordem em que aparece na lista.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
+int remove_mais_caro(Lista* li, struct produto *removido){
+    if(li == NULL || li->qtd == 0){
+        return 0;
+    }
+    int posicao = 0;
+    for(int i = 1; i < li->qtd; i++){
+        if(li->dados[i].preco > li->dados[posicao].preco){
+            posicao = i;
+        }
+    }
+    *removido = li->dados[posicao];
+    li->dados[posicao] = li->dados[li->qtd-1];
+    li->qtd--;
+    return 1;
+}
 
 
 
