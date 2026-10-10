@@ -35,4 +35,7 @@ int insere_lista_decrescente(Lista* li, struct produto p);
 //Q5
 int remove_mais_caro(Lista* li, struct produto *removido);
 
+//Q6
+int conta_faixa_preco(Lista* li, float min, float max);
+
 #endif
