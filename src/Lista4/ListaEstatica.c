@@ -118,7 +118,19 @@ int remove_mais_caro(Lista* li, struct produto *removido){
 //Implemente a função conta_faixa_preco, que devolve quantos produtos da lista têm o campo preco entre min e max, incluindo os dois limites. A função não deve alterar a lista.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
-int conta_faixa_preco(Lista* li, float min, float max)
+int conta_faixa_preco(Lista* li, float min, float max){
+    if(li == NULL || li->qtd == 0){
+        return 0;
+    }
+    int intermed = 0;
+    for(int i = 0; i < li->qtd; i++){
+        if(li->dados[i].preco <= max && li->dados[i].preco >= min){
+            intermed ++;
+        }
+    }
+    return intermed;
+
+}
 
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
