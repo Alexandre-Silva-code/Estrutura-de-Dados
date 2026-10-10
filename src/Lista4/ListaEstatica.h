@@ -38,4 +38,10 @@ int remove_mais_caro(Lista* li, struct produto *removido);
 //Q6
 int conta_faixa_preco(Lista* li, float min, float max);
 
+//Q7
+int remove_abaixo_de(Lista* li, float precoMinimo);
+
+//Q8
+int mescla_listas(Lista* destino, Lista* origem);
+
 #endif
