@@ -167,3 +167,39 @@ int remove_abaixo_de(Lista* li, float precoMinimo){
 //Observação: Se um código já existir em destino, o produto correspondente de origem deve ser ignorado, mesmo que os demais campos sejam diferentes.
 //Observação: Se destino ficar cheio antes de todos os produtos de origem serem avaliados, a função deve parar e devolver a contagem obtida até ali.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+int mescla_listas(Lista* destino, Lista* origem){
+    if(destino == NULL || origem == NULL || destino->qtd == MAX || origem->qtd == 0){
+        return 0;
+    }
+    int inseridos = 0;
+    if(destino->qtd == 0){
+        destino->dados[0] = origem->dados[0];
+        inseridos++;
+        destino->qtd++;
+    }
+    int i = 0;
+    while(i < origem->qtd){
+        int t = 0;
+        while(t < destino->qtd){
+            if(origem->dados[i].codigo == destino->dados[t].codigo){
+                break;
+            }
+            t++;
+
+        }
+        if(t == destino->qtd){
+                destino->dados[t] = origem->dados[i];
+                destino->qtd++;
+                inseridos++;
+            }
+        i++;
+        if(destino->qtd == MAX){
+            break;
+        }
+    }
+    return inseridos;
+
+}
+
+
