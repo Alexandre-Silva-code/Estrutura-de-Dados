@@ -123,7 +123,8 @@ int conta_faixa_preco(Lista* li, float min, float max)
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Q7
-
+//Implemente a função remove_abaixo_de, que remove da lista, utilizando a técnica de remoção otimizada, todos os produtos cujo preco seja menor que precoMinimo. A função devolve o número de produtos removidos.
+//Observação: Atenção: após a remoção otimizada de uma posição i, o elemento que passa a ocupar essa posição ainda não foi conferido pela função. Avaliar essa posição novamente, antes de avançar, é parte do problema.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -131,5 +132,8 @@ int conta_faixa_preco(Lista* li, float min, float max)
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //Q8
-
+//Implemente a função mescla_listas, que insere ao final de destino cada produto de origem cujo codigo ainda não exista em destino, sem removê-lo de origem. 
+//A função respeita o espaço disponível em destino e devolve quantos produtos foram efetivamente inseridos.
+//Observação: Se um código já existir em destino, o produto correspondente de origem deve ser ignorado, mesmo que os demais campos sejam diferentes.
+//Observação: Se destino ficar cheio antes de todos os produtos de origem serem avaliados, a função deve parar e devolver a contagem obtida até ali.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
