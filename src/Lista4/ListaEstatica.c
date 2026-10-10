@@ -139,6 +139,24 @@ int conta_faixa_preco(Lista* li, float min, float max){
 //Observação: Atenção: após a remoção otimizada de uma posição i, o elemento que passa a ocupar essa posição ainda não foi conferido pela função. Avaliar essa posição novamente, antes de avançar, é parte do problema.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
+int remove_abaixo_de(Lista* li, float precoMinimo){
+    if(li == NULL || li->qtd == 0){
+        return 0;
+    }
+    int removidos = 0;
+    int i = 0;
+    while(i < li->qtd){
+        if(li->dados[i].preco < precoMinimo){
+            li->dados[i] = li->dados[li->qtd-1];
+            removidos++;
+            li->qtd--;
+        } else{
+            i++;
+        }
+    }
+    return removidos;
+
+}
 
 
 
